@@ -23,7 +23,5 @@ public class Solution {
         } else {
             System.out.print("Not Weird");
         };
-
-        scanner.close();
     }
 }
