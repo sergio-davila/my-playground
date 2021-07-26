@@ -18,11 +18,20 @@ public class Loop1 {
             int a = in.nextInt();
             int b = in.nextInt();
             int n = in.nextInt();
-            if(a + b <= 2) {
-                System.out.print((a + (b * 1)) + " ");
-            } else {
-                System.out.print((a + (b * 1) + (a+b) * (a+b)) + " ");
+
+            int c = a;
+            for(int j=0;j<n;j++){
+                c += (int) (Math.pow(2, j) * b);
+                System.out.printf("%s ",c);
             }
+            System.out.println();
+
+
+//            if(a + b <= 2) {
+//                System.out.print((a + (b * 1)) + " ");
+//            } else {
+//                System.out.print((a + (b * 1) + (a+b) * (a+b)) + " ");
+//            }
 
             // else if((a + (b * 1) + (a+b) * (a+b))) {
             //     System.out.print((a + (b * 1) + (a+b) * (a+b)) + " ");
