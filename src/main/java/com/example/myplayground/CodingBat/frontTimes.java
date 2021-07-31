@@ -14,4 +14,10 @@ public class frontTimes {
         }
         return finalString;
     }
+
+    public static void main(String[] args) {
+        String str = "Hello my name is Alex Davila!";
+
+        System.out.println(str);
+    }
 }
