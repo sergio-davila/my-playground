@@ -75,6 +75,23 @@ public class stringBits {
         return false;
     }
 
+    public int stringMatch(String a, String b) {
+        // Figure which string is shorter.
+        int len = Math.min(a.length(), b.length());
+        int count = 0;
+
+        // Look at both substrings starting at i
+        for (int i = 0; i < len - 1; i++) {
+            String aSubstring = a.substring(i, i + 2);
+            String bSubstring = b.substring(i, i + 2);
+            if (aSubstring.equals(bSubstring)) {  // Use .equals() with strings
+                count++;
+            }
+        }
+
+        return count;
+    }
+
     public static void main(String[] args) {
 
 
