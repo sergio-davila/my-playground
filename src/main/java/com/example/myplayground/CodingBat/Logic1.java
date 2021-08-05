@@ -26,4 +26,13 @@ public class Logic1 {
             return 1;
         }
     }
+
+    public boolean squirrelPlay(int temp, boolean isSummer) {
+        if(temp >= 60) {
+            if(temp <= 90 || (isSummer == true && temp <= 100)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
