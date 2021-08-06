@@ -35,4 +35,17 @@ public class Logic1 {
         }
         return false;
     }
+
+    public int caughtSpeeding(int speed, boolean isBirthday) {
+
+        if(speed <= 60 || (isBirthday && speed <= 65)) {
+            return 0;
+        } else if(speed <= 80 || (isBirthday && speed <= 85)) {
+            return 1;
+        } else if(speed >= 81 && !isBirthday) {
+            return 2;
+        } else {
+            return 2;
+        }
+    }
 }
