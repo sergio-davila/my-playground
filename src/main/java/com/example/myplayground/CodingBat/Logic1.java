@@ -76,4 +76,12 @@ public class Logic1 {
             return false;
         }
     }
+
+    public boolean in1To10(int n, boolean outsideMode) {
+        if((n >= 1 && n <= 10 && !outsideMode) || (outsideMode && (n <= 1 || n >= 10))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
