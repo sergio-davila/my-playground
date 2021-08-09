@@ -127,5 +127,14 @@ public class Logic1 {
         return a + b;
     }
 
-
+    public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        if(isAsleep || (isMorning && !isMom)) {
+            return false;
+        } else if((isMorning && isMom) && !isAsleep) {
+            return true;
+        } else if(isMom) {
+            return true;
+        }
+        return true;
+    }
 }
