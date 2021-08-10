@@ -149,18 +149,31 @@ public class Logic1 {
         return 1;
     }
 
+//    public String fizzString(String str) {
+//        String[] letters = str.split("");
+//        for(int i = 0; i < letters.length; i++) {
+//            if(letters[0].toLowerCase() == "f" && letters[letters.length - 1].toLowerCase() == "b") {
+//                return "FizzBuzz";
+//            }else if(letters[0].toLowerCase() == "f") {
+//                return "Fizz";
+//            } else if(letters[letters.length - 1].toLowerCase() == "b") {
+//                return "Buzz";
+//            }
+//        }
+//        return str;
+//    }
+
     public String fizzString(String str) {
         String[] letters = str.split("");
-        for(int i = 0; i < letters.length; i++) {
-            if(letters[0].toLowerCase() == "f" && letters[letters.length - 1].toLowerCase() == "b") {
-                return "FizzBuzz";
-            }else if(letters[0].toLowerCase() == "f") {
-                return "Fizz";
-            } else if(letters[letters.length - 1].toLowerCase() == "b") {
-                return "Buzz";
-            }
+        if(letters[0].toLowerCase().equals("f") && letters[letters.length - 1].toLowerCase().equals("b")) {
+            return "FizzBuzz";
+        } else if(letters[0].toLowerCase().equals("f")) {
+            return "Fizz";
+        } else if(letters[letters.length - 1].toLowerCase().equals("b")) {
+            return "Buzz";
+        } else {
+            return str;
         }
-        return str;
     }
 
 }
