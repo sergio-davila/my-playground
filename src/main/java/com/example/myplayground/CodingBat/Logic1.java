@@ -196,4 +196,12 @@ public class Logic1 {
         return false;
     }
 
+    public boolean inOrder(int a, int b, int c, boolean bOk) {
+        if((bOk == false && b > a && b < c) || (bOk == true && b < c)) {
+            return true;
+        }
+        return false;
+    }
+
+
 }
