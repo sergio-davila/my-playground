@@ -233,21 +233,43 @@ public class Logic1 {
         return die1 + die2;
     }
 
+//    public int maxMod5(int a, int b) {
+//        if(a == b) {
+//            return 0;
+//        } else if(a % 5 == b % 5) {
+//            if(a < b) {
+//                return a;
+//            } else {
+//                return b;
+//            }
+//        } else {
+//            if(a > b) {
+//                return a;
+//            } else {
+//                return b;
+//            }
+//        }
+//    }
+
     public int maxMod5(int a, int b) {
         if(a == b) {
             return 0;
         } else if(a % 5 == b % 5) {
-            if(a < b) {
-                return a;
-            } else {
-                return b;
-            }
+            return Math.min(a, b);
         } else {
-            if(a > b) {
-                return a;
-            } else {
-                return b;
-            }
+            return Math.max(a, b);
+        }
+    }
+
+    public int redTicket(int a, int b, int c) {
+        if(a == 2 && b == 2 && c ==2) {
+            return 10;
+        } else if(a == b && b == c) {
+            return 5;
+        } else if(a != b && a != c) {
+            return 1;
+        } else {
+            return 0;
         }
     }
 
