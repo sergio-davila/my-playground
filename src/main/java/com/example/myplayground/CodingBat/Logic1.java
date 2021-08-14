@@ -214,4 +214,11 @@ public class Logic1 {
         return (a % 10 == b % 10) || (a % 10 == c % 10) || (b % 10 == c % 10);
     }
 
+    public boolean lessBy10(int a, int b, int c) {
+        if(a - b >= 10 || b - a >= 10 || c - a >= 10 || c - b >= 10 || a - c >= 10 || b - c >= 10) {
+            return true;
+        }
+        return false;
+    }
+
 }
