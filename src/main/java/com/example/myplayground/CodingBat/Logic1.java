@@ -312,6 +312,17 @@ public class Logic1 {
         return aLeft == bLeft || aLeft == bRight || aRight == bLeft || aRight == bRight;
     }
 
+    public int sumLimit(int a, int b) {
+        String aString = String.valueOf(a);
+//        String bString = String.valueOf(b);
+        int aLength = aString.length();
+//        int bLength = bString.length();
+        if(String.valueOf(a + b).length() == aLength) {
+            return a + b;
+        }
+        return a;
+    }
+
 
     public static void main(String[] args) {
         int a = 12;
