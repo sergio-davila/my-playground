@@ -293,4 +293,31 @@ public class Logic1 {
         }
     }
 
+    public boolean shareDigit(int a, int b) {
+        int aLeft = a/10;
+        int aRight = a%10;
+        int bLeft = b/10;
+        int bRight = b%10;
+        if(aLeft == bLeft || aLeft == bRight || aRight == bLeft || aRight == bRight) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean shareDigitSimplified(int a, int b) {
+        int aLeft = a/10;
+        int aRight = a%10;
+        int bLeft = b/10;
+        int bRight = b%10;
+        return aLeft == bLeft || aLeft == bRight || aRight == bLeft || aRight == bRight;
+    }
+
+
+    public static void main(String[] args) {
+        int a = 12;
+        int aLeft = a/10;
+        int aRight = a%10;
+        System.out.println(aLeft);
+        System.out.println(aRight);
+    }
 }
