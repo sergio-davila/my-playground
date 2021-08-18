@@ -9,4 +9,24 @@ public class Logic2 {
             return goal % 5 <= small; //Check if there are enough small bricks
         }
     }
+
+    public int loneSum(int a, int b, int c) {
+        int aNew = a;
+        int bNew = b;
+        int cNew = c;
+
+        if(aNew == bNew) {
+            a = 0;
+            b = 0;
+        }
+        if(aNew == cNew) {
+            a = 0;
+            c = 0;
+        }
+        if(bNew == cNew) {
+            b =0;
+            c = 0;
+        }
+        return a + b + c;
+    }
 }
