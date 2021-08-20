@@ -125,6 +125,47 @@ public class Logic2 {
         return false;
     }
 
+//    public int makeChocolate(int small, int big, int goal) {
+//        int minusBigBars = goal - (5 * big);
+//        int result = minusBigBars - small;
+//        if(result < 0) {
+//            if(small + result <) {
+//                return small + result;
+//            }
+//
+//        }
+//        return small - result;
+//    }
+
+//    public int makeChocolate(int small, int big, int goal) {
+//        int bigInKilos = 5 * big;
+//        int minusBigBars = 0;
+//        int result = 0;
+//        if((bigInKilos < goal && bigInKilos + small >= goal) || bigInKilos == goal) {
+//            minusBigBars = goal - bigInKilos;
+//            result = minusBigBars - small;
+//            return small - Math.abs(result);
+//        } else if(bigInKilos > goal) {
+//            result =  -(bigInKilos - goal);
+//            return result;
+//        }
+//        return -1;
+//    }
+
+    public int makeChocolate(int small, int big, int goal) {
+        if(goal >= 5){
+            if(goal / 5 >= big) {
+                goal -= big * 5;
+            } else {
+                goal = goal % 5;
+            }
+        }
+        if(goal <= small) {
+            return goal;
+        }
+        return -1;
+    }
+
 
 
     public static void main(String[] args) {
