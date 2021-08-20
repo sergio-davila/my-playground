@@ -74,7 +74,28 @@ public class Logic2 {
         }
     }
 
+//    public boolean closeFar(int a, int b, int c) {
+//        if((Math.abs(a - b) <= 1 || Math.abs(a - c) <= 1) && (Math.abs(a - b) > 1 || Math.abs(a - c) > 1) || Math.abs(b - c) > 1) {
+//            return true;
+//        }
+//        return false;
+//    }
+
+    public boolean closeFar(int a, int b, int c) {
+        if(Math.abs(a - b) <= 1) {
+            if(Math.abs(c - a) > 1 && Math.abs(c - b) > 1) {
+                return true;
+            }
+        } else if(Math.abs(a - c) <= 1) {
+            if(Math.abs(b - a) > 1 && Math.abs(b - c) > 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         System.out.println(12 / 10);
+        System.out.println(Math.abs(84 - 4230));
     }
 }
