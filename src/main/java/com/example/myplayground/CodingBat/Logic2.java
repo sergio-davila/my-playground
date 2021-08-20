@@ -55,9 +55,26 @@ public class Logic2 {
     }
 
     public int fixTeen(int n) {
-        if(13 <= n && n <= 19 && n != 15 && n != 16)
+        if(13 <= n && n <= 19 && n != 15 && n != 16) {
             return 0;
-
+        }
         return n;
+    }
+
+    public int roundSum(int a, int b, int c) {
+        return round10(a) + round10(b) + round10(c);
+    }
+
+    public int round10(int num) {
+        int numRight = num % 10;
+        if(numRight < 5) {
+            return num - (numRight);
+        } else {
+            return num + (10 - numRight);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(12 / 10);
     }
 }
