@@ -118,6 +118,14 @@ public class Logic2 {
         return 0;
     }
 
+    public boolean evenlySpaced(int a, int b, int c) {
+        if(c - b == b - a || a - b == b - c || b - a == a - c || b - c == c - a) {
+            return true;
+        }
+        return false;
+    }
+
+
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
