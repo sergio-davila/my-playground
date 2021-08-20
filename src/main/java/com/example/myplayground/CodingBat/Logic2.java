@@ -3,7 +3,7 @@ package com.example.myplayground.CodingBat;
 public class Logic2 {
 
     public boolean makeBricks(int small, int big, int goal) {
-        if(goal > (big*5 + small) ) { //Not enough total
+        if (goal > (big * 5 + small)) { //Not enough total
             return false;
         } else {
             return goal % 5 <= small; //Check if there are enough small bricks
@@ -15,16 +15,16 @@ public class Logic2 {
         int bNew = b;
         int cNew = c;
 
-        if(aNew == bNew) {
+        if (aNew == bNew) {
             a = 0;
             b = 0;
         }
-        if(aNew == cNew) {
+        if (aNew == cNew) {
             a = 0;
             c = 0;
         }
-        if(bNew == cNew) {
-            b =0;
+        if (bNew == cNew) {
+            b = 0;
             c = 0;
         }
         return a + b + c;
@@ -35,16 +35,16 @@ public class Logic2 {
         int bNew = b;
         int cNew = c;
 
-        if(aNew == 13) {
+        if (aNew == 13) {
             a = 0;
             b = 0;
             c = 0;
         }
-        if(bNew == 13) {
+        if (bNew == 13) {
             b = 0;
             c = 0;
         }
-        if(cNew == 13) {
+        if (cNew == 13) {
             c = 0;
         }
         return a + b + c;
@@ -55,7 +55,7 @@ public class Logic2 {
     }
 
     public int fixTeen(int n) {
-        if(13 <= n && n <= 19 && n != 15 && n != 16) {
+        if (13 <= n && n <= 19 && n != 15 && n != 16) {
             return 0;
         }
         return n;
@@ -67,7 +67,7 @@ public class Logic2 {
 
     public int round10(int num) {
         int numRight = num % 10;
-        if(numRight < 5) {
+        if (numRight < 5) {
             return num - (numRight);
         } else {
             return num + (10 - numRight);
@@ -82,17 +82,42 @@ public class Logic2 {
 //    }
 
     public boolean closeFar(int a, int b, int c) {
-        if(Math.abs(a - b) <= 1) {
-            if(Math.abs(c - a) > 1 && Math.abs(c - b) > 1) {
+        if (Math.abs(a - b) <= 1) {
+            if (Math.abs(c - a) > 1 && Math.abs(c - b) > 1) {
                 return true;
             }
-        } else if(Math.abs(a - c) <= 1) {
-            if(Math.abs(b - a) > 1 && Math.abs(b - c) > 1) {
+        } else if (Math.abs(a - c) <= 1) {
+            if (Math.abs(b - a) > 1 && Math.abs(b - c) > 1) {
                 return true;
             }
         }
         return false;
     }
+
+//    public int blackjack(int a, int b) {
+//        if(Math.abs(21 - a) < Math.abs(21 - b) && a <= 21) {
+//            return a;
+//        } else if(Math.abs(21 - b) < Math.abs(21 - a) && b <= 21) {
+//            return b;
+//        }
+//        return 0;
+//    }
+
+    public int blackjack(int a, int b) {
+        if (a <= 21 && b <= 21) {
+            if ((21 - a) < (21 - b)) {
+                return a;
+            } else {
+                return b;
+            }
+        } else if(a > 21 && b <= 21) {
+            return b;
+        } else if(b > 21 && a <= 21){
+            return a;
+        }
+        return 0;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
