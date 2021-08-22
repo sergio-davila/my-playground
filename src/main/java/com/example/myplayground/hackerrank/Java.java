@@ -14,5 +14,9 @@ public class Java {
         }
         System.out.println("================================");
 
+
+        for(int i = 1; sc.hasNext()== true; i++){
+            System.out.println(i + " " + sc.nextLine());
+        }
     }
 }
