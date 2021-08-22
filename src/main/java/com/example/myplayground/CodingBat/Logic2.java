@@ -183,6 +183,20 @@ public class Logic2 {
         return count;
     }
 
+    public int bigDiff(int[] nums) {
+        int smaller = 5000;
+        int bigger= 0;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] > bigger) {
+                bigger = nums[i];
+            }
+            if(nums[i] < smaller) {
+                smaller = nums[i];
+            }
+        }
+        return bigger - smaller;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
