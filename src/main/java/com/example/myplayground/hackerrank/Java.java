@@ -1,5 +1,6 @@
 package com.example.myplayground.hackerrank;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Java {
@@ -20,6 +21,14 @@ public class Java {
             System.out.println(e);
         }
 
+    }
+
+    public static String findDay(int month, int day, int year) {
+        int d = Integer.valueOf(day);
+        int m = Integer.valueOf(month);
+        int y = Integer.valueOf(year);
+        LocalDate date = LocalDate.of(y, m, d);
+        return date.getDayOfWeek().toString();
     }
 
     public static void main(String[] args) {
