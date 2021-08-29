@@ -176,5 +176,15 @@ public class Java {
         for (String word : words) {
             System.out.println(word);
         }
+
+        String output = "";
+        for (int i = A.length() - 1; i >= 0; i--) {
+            output = output + A.charAt(i);
+        }
+        if(A.equals(output)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
     }
 }
