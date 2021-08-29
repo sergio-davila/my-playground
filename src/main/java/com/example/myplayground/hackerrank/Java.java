@@ -36,7 +36,29 @@ public class Java {
         return date.getDayOfWeek().toString();
     }
 
-
+    static boolean isAnagram(String a, String b) {
+        // Complete the function
+        if (a.length() != b.length()) {
+            return false;
+        }
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        int sum = 0;
+        for (char letter = 'a'; letter <= 'z'; letter++) {
+            for (int i = 0; i < a.length(); i++) {
+                if (a.charAt(i) == letter) {
+                    sum++;
+                }
+                if (b.charAt(i) == letter) {
+                    sum--;
+                }
+            }
+            if (sum != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
