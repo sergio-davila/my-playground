@@ -138,11 +138,22 @@ public class Java {
 
 
         String s = "He is a very very good boy, isn't he?";
-        String delims = "[ '\'.,?!]+";
+        String delims = "[ !,?._'@]+";
         String[] tokens = s.split(delims);
         System.out.println(tokens.length);
         for(int i = 0; i < tokens.length; i++) {
             System.out.println(tokens[i]);
+        }
+
+        if (s.trim().length()==0 || s.trim().length()>400000) {
+            System.out.println(0);
+            return;
+        }
+
+        String words[]=s.trim().split("[ !,?.\\_'@]+");
+        System.out.println(words.length);
+        for (String word : words) {
+            System.out.println(word);
         }
     }
 }
