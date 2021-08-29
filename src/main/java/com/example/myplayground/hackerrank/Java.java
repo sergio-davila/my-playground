@@ -36,6 +36,8 @@ public class Java {
         return date.getDayOfWeek().toString();
     }
 
+
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
@@ -89,5 +91,21 @@ public class Java {
         System.out.println("China: " + localPayment.format(payment));
         localPayment = NumberFormat.getCurrencyInstance(Locale.FRANCE);
         System.out.println("France: " + localPayment.format(payment));
+
+        // java string intro
+        String A=sc.next();
+        String B=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        System.out.println(A.length() + B.length());
+        String array[] = {A, B};
+        Arrays.sort(array);
+        if(array[0] == A) {
+            System.out.println("No");
+        } else {
+            System.out.println("Yes");
+        }
+        String ACapital = A.substring(0, 1).toUpperCase() + A.substring(1);
+        String BCapital = B.substring(0, 1).toUpperCase() + B.substring(1);
+        System.out.println(ACapital + " " + BCapital);
     }
 }
