@@ -107,5 +107,11 @@ public class Java {
         String ACapital = A.substring(0, 1).toUpperCase() + A.substring(1);
         String BCapital = B.substring(0, 1).toUpperCase() + B.substring(1);
         System.out.println(ACapital + " " + BCapital);
+
+        // java substring exercise
+        String S = sc.next();
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+        System.out.println(S.substring(start, end));
     }
 }
