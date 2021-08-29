@@ -60,6 +60,27 @@ public class Java {
         return true;
     }
 
+    public static String getSmallestAndLargest(String s, int k) {
+        String sequence = s.substring(0, k);
+        String smallest = sequence;
+        String largest = sequence;
+
+        // Complete the function
+
+        for(int i = 1; i <= (s.length() - k); i++){
+            sequence = s.substring(i, (i + k));
+
+            if(sequence.compareTo(smallest) < 0){
+                smallest = sequence;
+            }
+            if(sequence.compareTo(largest) > 0){
+                largest = sequence;
+            }
+        }
+
+        return smallest + "\n" + largest;
+    }
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
@@ -121,7 +142,7 @@ public class Java {
         System.out.println(A.length() + B.length());
         String array[] = {A, B};
         Arrays.sort(array);
-        if(array[0] == A) {
+        if(array[0].equals(A)) {
             System.out.println("No");
         } else {
             System.out.println("Yes");
