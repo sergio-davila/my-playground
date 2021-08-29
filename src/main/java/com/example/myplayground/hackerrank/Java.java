@@ -135,5 +135,14 @@ public class Java {
         int start = sc.nextInt();
         int end = sc.nextInt();
         System.out.println(S.substring(start, end));
+
+
+        String s = "He is a very very good boy, isn't he?";
+        String delims = "[ '\'.,?!]+";
+        String[] tokens = s.split(delims);
+        System.out.println(tokens.length);
+        for(int i = 0; i < tokens.length; i++) {
+            System.out.println(tokens[i]);
+        }
     }
 }
