@@ -186,5 +186,17 @@ public class Java {
         } else {
             System.out.println("No");
         }
+
+        int testCases = Integer.parseInt(sc.nextLine());
+        while(testCases > 0){
+            String pattern = sc.nextLine();
+            try {
+                Pattern.compile(pattern);
+                System.out.println("Valid");
+            } catch (PatternSyntaxException e) {
+                System.out.println("Invalid");
+            }
+            testCases--;
+        }
     }
 }
