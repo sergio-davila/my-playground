@@ -211,8 +211,20 @@ public class Logic2 {
         return sum;
     }
 
+    public int sum13(int[] nums) {
+        int result = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] == 13) {
+                break;
+            }
+            result += nums[i];
+        }
+        return result;
+    }
 
-        public static void main(String[] args) {
+
+
+    public static void main(String[] args) {
         System.out.println(12 / 10);
         System.out.println(Math.abs(84 - 4230));
     }
