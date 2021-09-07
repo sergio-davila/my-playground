@@ -110,16 +110,16 @@ public class Logic2 {
             } else {
                 return b;
             }
-        } else if(a > 21 && b <= 21) {
+        } else if (a > 21 && b <= 21) {
             return b;
-        } else if(b > 21 && a <= 21){
+        } else if (b > 21 && a <= 21) {
             return a;
         }
         return 0;
     }
 
     public boolean evenlySpaced(int a, int b, int c) {
-        if(c - b == b - a || a - b == b - c || b - a == a - c || b - c == c - a) {
+        if (c - b == b - a || a - b == b - c || b - a == a - c || b - c == c - a) {
             return true;
         }
         return false;
@@ -153,21 +153,21 @@ public class Logic2 {
 //    }
 
     public int makeChocolate(int small, int big, int goal) {
-        if(goal >= 5){
-            if(goal / 5 >= big) {
+        if (goal >= 5) {
+            if (goal / 5 >= big) {
                 goal -= big * 5;
             } else {
                 goal = goal % 5;
             }
         }
-        if(goal <= small) {
+        if (goal <= small) {
             return goal;
         }
         return -1;
     }
 
     public boolean firstLast6(int[] nums) {
-        if(nums[0] == 6 || nums[nums.length - 1] == 6) {
+        if (nums[0] == 6 || nums[nums.length - 1] == 6) {
             return true;
         }
         return false;
@@ -175,8 +175,8 @@ public class Logic2 {
 
     public int countEvens(int[] nums) {
         int count = 0;
-        for(int i = 0; i < nums.length; i++) {
-            if(nums[i] % 2 == 0) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
                 count++;
             }
         }
@@ -185,12 +185,12 @@ public class Logic2 {
 
     public int bigDiff(int[] nums) {
         int smaller = 5000;
-        int bigger= 0;
-        for(int i = 0; i < nums.length; i++) {
-            if(nums[i] > bigger) {
+        int bigger = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > bigger) {
                 bigger = nums[i];
             }
-            if(nums[i] < smaller) {
+            if (nums[i] < smaller) {
                 smaller = nums[i];
             }
         }
@@ -211,17 +211,29 @@ public class Logic2 {
         return sum;
     }
 
+    //    public int sum13(int[] nums) {
+//        int result = 0;
+//        for (int i = 0; i < nums.length; i++) {
+//            if(nums[i] == 13) {
+//                break;
+//            }
+//            result += nums[i];
+//        }
+//        return result;
+//    }
     public int sum13(int[] nums) {
         int result = 0;
         for (int i = 0; i < nums.length; i++) {
-            if(nums[i] == 13) {
-                break;
+            if (nums[i] == 13) {
+                continue;
+            }
+            if (i > 0 && nums[i - 1] == 13) {
+                    continue;
             }
             result += nums[i];
         }
         return result;
     }
-
 
 
     public static void main(String[] args) {
