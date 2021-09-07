@@ -235,6 +235,23 @@ public class Logic2 {
         return result;
     }
 
+    public int sum67(int[] nums) {
+        int sum = 0;
+        boolean ignore = false;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] == 6) {
+                ignore = true;
+            }
+            if(!ignore) {
+                sum += nums[i];
+            }
+            if(ignore && nums[i] == 7) {
+                ignore = false;
+            }
+        }
+        return sum;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
