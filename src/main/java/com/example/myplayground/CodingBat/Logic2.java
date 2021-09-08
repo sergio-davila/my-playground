@@ -305,6 +305,30 @@ public class Logic2 {
         return false;
     }
 
+    public boolean more14(int[] nums) {
+        int oneIterator = 0;
+        int fourIterator = 0;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] == 1) {
+                oneIterator++;
+            }
+            if(nums[i] == 4) {
+                fourIterator++;
+            }
+        }
+        if(oneIterator > fourIterator) {
+            return true;
+        }
+        return false;
+    }
+
+    public int[] fizzArray(int n) {
+        int[] newArray = new int[n];
+        for(int i = 0; i < n; i++) {
+            newArray[i] = i;
+        }
+        return newArray;
+    }
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
