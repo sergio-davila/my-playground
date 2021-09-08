@@ -330,6 +330,43 @@ public class Logic2 {
         return newArray;
     }
 
+    public boolean only14(int[] nums) {
+        int iterator = 0;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] == 1 || nums[i] == 4) {
+                iterator++;
+            }
+        }
+        if(iterator == nums.length) {
+            return true;
+        }
+        return false;
+    }
+
+    public String[] fizzArray2(int n) {
+        String[] newArray = new String[n];
+        for(int i = 0; i < n; i++) {
+            newArray[i] = Integer.toString(i);
+        }
+        return newArray;
+    }
+
+    public boolean no14(int[] nums) {
+        int oneIterator = 0;
+        int fourIterator = 0;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] == 1) {
+                oneIterator++;
+            }
+            if(nums[i] == 4) {
+                fourIterator++;
+            }
+        }
+        if(oneIterator > 0 && fourIterator > 0) {
+            return false;
+        } else return (oneIterator > 0 && fourIterator == 0) || (oneIterator == 0 && fourIterator > 0) || (oneIterator == 0 && fourIterator == 0);
+    }
+
     public static void main(String[] args) {
         System.out.println(12 / 10);
         System.out.println(Math.abs(84 - 4230));
