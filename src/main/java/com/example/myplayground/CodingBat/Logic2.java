@@ -292,6 +292,19 @@ public class Logic2 {
         return trece;
     }
 
+    public boolean sum28(int[] nums) {
+        int iterator = 0;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] == 2) {
+                iterator += 2;
+            }
+        }
+        if(iterator == 8) {
+            return true;
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
