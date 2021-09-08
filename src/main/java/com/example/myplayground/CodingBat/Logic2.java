@@ -367,6 +367,14 @@ public class Logic2 {
         } else return (oneIterator > 0 && fourIterator == 0) || (oneIterator == 0 && fourIterator > 0) || (oneIterator == 0 && fourIterator == 0);
     }
 
+    public boolean isEverywhere(int[] nums, int val) {
+        for(int i = 0; i < nums.length - 1; i++) {
+            if(nums[i] != val && nums[i + 1] != val)
+                return false;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         System.out.println(12 / 10);
         System.out.println(Math.abs(84 - 4230));
