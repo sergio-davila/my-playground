@@ -242,7 +242,7 @@ public class Logic2 {
             if(nums[i] == 6) {
                 ignore = true;
             }
-            if(!ignore) {
+            if(ignore == false) {
                 sum += nums[i];
             }
             if(ignore && nums[i] == 7) {
@@ -250,6 +250,21 @@ public class Logic2 {
             }
         }
         return sum;
+    }
+
+    public boolean has22(int[] nums) {
+        String iterator = "";
+        for(int i = 0; i < nums.length; i++) {
+            iterator += Integer.toString(nums[i]);
+            if(iterator.equals("2")) {
+                continue;
+            }
+            if(iterator.equals("22")) {
+                return true;
+            }
+            iterator = "";
+        }
+        return false;
     }
 
 
