@@ -267,6 +267,31 @@ public class Logic2 {
         return false;
     }
 
+    public boolean lucky13(int[] nums) {
+        int iterator = 0;
+        boolean trece = true;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] == 1 || nums[i] == 3) {
+                trece = false;
+            }
+        }
+        return trece;
+    }
+
+    public boolean has1And3(int[] nums) {
+        int iterator = 0;
+        boolean trece = false;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] == 1 || nums[i] == 3) {
+                iterator++;
+            }
+            if(iterator == 2) {
+                trece = true;
+            }
+        }
+        return trece;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
