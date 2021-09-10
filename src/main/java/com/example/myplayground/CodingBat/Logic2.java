@@ -375,6 +375,24 @@ public class Logic2 {
         return true;
     }
 
+    public boolean either24(int[] nums) {
+        int twoiterator = 0;
+        int fouriterator = 0;
+        for(int i = 0; i < nums.length - 1; i++) {
+            if(nums[i] == 2 && nums[i + 1] == 2) {
+                twoiterator += 1;
+            }
+            if(nums[i] == 4 && nums[i + 1] == 4) {
+                fouriterator += 1;
+            }
+        }
+        if((twoiterator == 1 && fouriterator == 1) || (twoiterator == 0 && fouriterator == 0)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(12 / 10);
         System.out.println(Math.abs(84 - 4230));
