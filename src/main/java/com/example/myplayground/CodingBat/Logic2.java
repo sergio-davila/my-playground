@@ -398,6 +398,28 @@ public class Logic2 {
 
         return iterator;
     }
+    
+    public boolean has77(int[] nums) {
+        for(int i = 0; i < nums.length - 1; i++) {
+            if(nums[i] == 7 && (nums[i + 1] == 7 || (i < nums.length - 2 && nums[i + 2] ==7))) {
+                return true;
+            } 
+        }
+        return false;
+    }
+    
+    public boolean has12(int[] nums) {
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] == 1) {
+                for(int j = i; j < nums.length; j++) {
+                    if(nums[j] == 2) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
