@@ -432,6 +432,15 @@ public class Logic2 {
         }
         return false;
     }
+    
+    public boolean haveThree(int[] nums) {
+  for(int i = 0; i < nums.length - 4; i++) {
+    if(nums[i] == 3 && nums[i + 2] == 3 && nums[i + 4] == 3) {
+      return true;
+    }
+  }
+  return false;
+}
 
     public static void main(String[] args) {
         System.out.println(12 / 10);
